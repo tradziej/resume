@@ -1,0 +1,206 @@
+\documentclass[letterpaper,11pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages                                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage[english]{babel}
+\usepackage[sfdefault,light]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{gray}\titlerule \vspace{-5pt}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands                                                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\sectionElementsListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\sectionElementsListEnd}{\end{itemize}}
+
+\newcommand{\bulletItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\formattedBulletItem}[2]{\bulletItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\sectionElement}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+  }
+  
+\newcommand{\bulletListStart}{\begin{itemize}}
+\newcommand{\bulletListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\stacklist}[1]{\color{gray}\scriptsize{
+  Stack: #1
+}}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header                                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}l}
+
+  \begin{tabular}{@{}l@{$\ $}l@{}}%
+    \multicolumn{2}{l}{\textbf{\Large Tomasz Radziejewski}}\\
+    Location: & Gdańsk, Poland \\
+    Mobile: & (omitted for web) \\
+    E-mail: & \href{mailto:tomasz@radziejewski.pl}{tomasz@radziejewski.pl} \\
+  \end{tabular} &
+
+  \begin{tabular}{@{}l@{$\ $}l@{}}%
+    \multicolumn{2}{l}{}\\
+    Web: & \href{https://radziejewski.pl/}{radziejewski.pl} \\
+    Github: & \href{https://github.com/tradziej/}{tradziej} \\
+    LinkedIn: & \href{https://www.linkedin.com/in/radziejewski/}{radziejewski} \\
+  \end{tabular}
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Summary                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Summary}
+  Experienced Software Engineer specializing in software solutions for business.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Technical Skills                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Technical Skills}
+ \sectionElementsListStart
+    \formattedBulletItem{Programming Languages}{Ruby, JavaScript, HTML, CSS, SQL}
+
+    \formattedBulletItem{Libraries \& Frameworks}{Ruby on Rails, RSpec, Minitest, React, Ember.js, Git, Docker}
+
+    \item{
+    \textbf{}{Proficient in a variety of programming aspects, such as design patterns, version control, code documentation, code reviews,
+      test-driven development, continuous integration, continuous delivery and agile project management. \vspace{-2pt}}
+    }\vspace{-4pt}
+ \sectionElementsListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience                                                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+  \sectionElementsListStart
+    \sectionElement
+    {Localistico}{Remote}
+    {Software Engineer}{May 2019 - ...}
+      \bulletListStart
+      \bulletItem{{\href{https://localistico.com}{Localistico.com}}}
+        {Currently working on the backend for an app used by brands like Orange and Starbucks to manage and track how their locations look across different
+        mapping and platforms, from Google Maps to Yelp. Built features like extended attributes for Google My Business or roles \& permissions.
+        Experience with fast-paced, high intensity environments.
+          \\ \stacklist{Ruby, Ruby on Rails, PostgreSQL, Minitest, Heroku, Docker}}
+    \bulletListEnd
+
+    \sectionElement
+      {Self-employed}{Remote}
+      {Software Engineer}{Jan 2016 - Apr 2019}
+
+      \bulletListStart
+        \bulletItem{{\href{https://getbuzz.io/start}{Getbuzz.io}}}
+          {Developed a Ruby on Rails backend as well as a frontend using Ember.js JavaScript framework.
+            Took ownership of the codebase and successfully designed and developed diverse features such as: multi-author
+            blogging feature, invite feature for various social networks, connect feature for software users,
+            a payments feature, design of database models and queries, a Docker-based deployment environment,
+            as well as frontend JavaScript components.
+            \\ \stacklist{Ruby, Ruby on Rails, JavaScript, Ember.js, HTML, CSS, PostgreSQL, RSpec, CircleCI, AWS, Docker}}
+      \bulletListEnd
+
+    \sectionElement
+      {Codahead}{Kraków, Poland}
+      {Software Engineer}{Apr 2013 - Dec 2015}
+
+      \bulletListStart
+        \bulletItem{\href{https://spinlister.com}{Spinlister.com}}
+          {Peer-to-peer bike rental platform. Involved in improving testability, refactoring and maintenance of
+            legacy code. Worked with international teams.
+            \\ \stacklist{Ruby, Ruby on Rails, JavaScript, Backbone.js, HTML, CSS, PostgreSQL, RSpec, CircleCI, Heroku}}
+
+        \bulletItem{\href{https://listables.com}{Listables.com}}
+          {Ember.js frontend for a web application used for collaboratively creating, sharing and tracking checklists.
+            \\ \stacklist{JavaScript, Ember.js, HTML, CSS, Apache Cordova}}
+
+        \bulletItem{\href{https://appetizeapp.com}{Appetizeapp.com}}
+          {Point of Sale \& Ordering Solutions. Involved in features such as integration with external systems,
+            as well as bug fixing.
+            \\ \stacklist{PHP, JavaScript, HTML, CSS, MySQL}}
+      \bulletListEnd
+  \sectionElementsListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education                                                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+  \sectionElementsListStart
+    \sectionElement
+      {Tadeusz Kościuszko Cracow University of Technology}{Kraków, Poland}
+      {Master of Science in Applied Computer Science}{2011 -- 2013}
+
+    \sectionElement
+      {AGH University of Science and Technology}{Kraków, Poland}
+      {Bachelor of Science in Computer Science and Econometrics}{2008 -- 2011}
+  \sectionElementsListEnd
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal Projects                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Personal Projects}
+  \sectionElementsListStart
+    \formattedBulletItem{\href{https://github.com/tradziej/najnowsze.xyz}{Najnowsze.xyz}}
+      {A lightweight, serverless Wykop client.}
+
+    \formattedBulletItem{Aboutme GraphQL API}
+      {Serverless microservice on AWS Lambda providing information about recently played track from Spotify,
+      posts from Instagram, distance jogged from Endomondo, etc.}
+  \sectionElementsListEnd
+
+\end{document}
